@@ -1,0 +1,113 @@
+:root{
+    --body-bg: rgb(233, 216, 119);
+    --box-bg: rgb(233, 216, 119);
+}
+html, body{
+    height: 100%;
+}
+body{
+    background-color: var(--body-bg);
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.menu{
+    width: 100%;
+    height: 50px;
+    background-color: beige;
+    border-radius: 10px;
+}
+.hamburger1{
+    flex-direction: column;
+    align-items: right;
+}
+.hamburger-title{
+    color: white;
+    font-size: 10px;
+    padding-bottom: 5px;
+}
+.hamburger-container{
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: var(--hamburger-bg);
+    margin-left: 95%;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    transition: 0.5s;
+    background: pink;
+}
+.hamburger::before,
+.hamburger::after{
+    content: "";
+}
+.hamburger{
+    top: 40%;
+}
+.hamburger::before{
+    top: -20px;
+}
+.hamburger::after{
+    top: 20px;
+}
+.toggle:checked ~ .hamburger::after{
+    top: 0;
+    transform: rotate(225deg);
+}
+.toggle:checked ~ .hamburger::before{
+    top: 0;
+    transform: rotate(135deg);
+}
+.toggle:checked ~ .hamburger{
+    background: var(--hamburger-bg);
+}
+.toggle{
+    opacity: 0;
+}
+.container{
+    margin-top: 10px;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: beige;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner{
+    background-image: url(back.jpg);
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    display:flex;
+    justify-content: center;
+}
+.profile{
+    background-size: 100px;
+    background-image: url(리처드.jpg);
+    border-radius: 200px;
+    width: 100px;
+    height: 100px;
+    margin-top: 180px;
+    transition: 0.5s;
+}
+.profile:hover{
+    transform: scale(1.2);
+}
+button{
+    border-radius: 10px;
+    background-color: yellow;
+    align-items: center;
+}
+.card{
+    overflow: auto;
+    width: 390px;
+    height: 90px;
+    border: 5px solid white;
+}
